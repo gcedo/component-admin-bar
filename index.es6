@@ -26,7 +26,7 @@ export default class AdminBar extends React.Component {
       icon: {
         icon: 'magnifier',
         useBackground: true,
-        color: 'honolulu',
+        color: 'chicago',
       }
     };
     const editLinkButton = this.props.renderEditLink ? this.props.renderEditLink(editLinkProps) : (
