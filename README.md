@@ -1,3 +1,3 @@
-# component-subscribe-message
+# component-admin-bar
 
-It provides a subscribe message bar with an optional counter for read articles.
+Provide an administration bar.
