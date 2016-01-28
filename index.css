@@ -8,7 +8,6 @@
 
 .admin-bar {
   background-color: var(--admin-bar-background, var(--color-honolulu));
-  font-size: 1em;
   padding-top: var(--admin-bar-vertical-padding, .5em);
   padding-bottom: var(--admin-bar-vertical-padding, .5em);
 }
