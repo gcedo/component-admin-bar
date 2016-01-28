@@ -1,5 +1,6 @@
 import React from 'react';
 import Button from '@economist/component-link-button';
+import BarWrapper from '@economist/component-bar-wrapper';
 
 export default class AdminBar extends React.Component {
 
@@ -8,30 +9,33 @@ export default class AdminBar extends React.Component {
       className: React.PropTypes.string,
       children: React.PropTypes.node,
       renderEditLink: React.PropTypes.func,
+      title: React.PropTypes.string,
     };
   }
 
   render() {
-    const className = (this.props.className) ? ` ${this.props.className}` : ``;
+    const classNamesList = [ 'admin-bar' ];
+    if (this.props.className) {
+      classNamesList.push(this.props.className);
+    }
 
-    const children = (<div className="subscribe-message__inner-wrapper">
-      {this.props.children}
-    </div>);
+    const className = classNamesList.join(' ');
 
     const editLinkProps = {
-      className: `subscribe-message${className}`,
-      href: 'aaa',
-      target: 'bbb',
+      className: `admin-bar__edit-link`,
+      href: `${document.location.href}edit`,
+      target: '_blank',
       children: 'Edit this article',
-      icon: {
-        icon: 'magnifier',
-        useBackground: true,
-        color: 'chicago',
-      }
     };
+    const barTitle = this.props.title ? (
+      <span className='admin-bar__title'>{this.props.title}</span>
+    ) : null;
     const editLinkButton = this.props.renderEditLink ? this.props.renderEditLink(editLinkProps) : (
       <Button {...editLinkProps} />
     );
-    return editLinkButton;
+    return (<BarWrapper className={className} close={false}>
+      {barTitle}
+      {editLinkButton}
+    </BarWrapper>);
   }
 }
