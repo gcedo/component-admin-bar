@@ -9,6 +9,7 @@ export default class AdminBar extends React.Component {
       className: React.PropTypes.string,
       children: React.PropTypes.node,
       renderEditLink: React.PropTypes.func,
+      editLinkHref: React.PropTypes.string,
       title: React.PropTypes.string,
     };
   }
@@ -28,7 +29,7 @@ export default class AdminBar extends React.Component {
     }
     const editLinkDefaultProps = {
       className: `admin-bar__edit-link`,
-      href: `${document.location.href}edit`,
+      href: this.props.editLinkHref,
       target: '_blank',
       children: 'Edit this article',
       key: 'editLink',
