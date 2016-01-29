@@ -6,5 +6,6 @@ export default (
     title="Admin bar"
     classNamePrefix="admin-bar-wrapper"
     className="admin-bar-wrapper"
+    editLinkHref="http://www.economist.com"
   />
 );
