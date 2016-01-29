@@ -8,11 +8,14 @@ describe(`A admin bar`, () => {
       AdminBar.should.be.a('function').and.respondTo('render');
     });
     it(`it's renders a React element`, () => {
-      React.isValidElement(<AdminBar/>).should.equal(true);
+      React.isValidElement(<AdminBar editLinkHref="http://www.economist.com"/>).should.equal(true);
     });
     it(`it can have a title`, () => {
       const shallowRenderer = TestUtils.createRenderer();
-      shallowRenderer.render(React.createElement(AdminBar, { title: 'Just a title' }));
+      shallowRenderer.render(React.createElement(AdminBar, {
+        title: 'Just a title',
+        editLinkHref: 'http://www.economist.com',
+      }));
       const title = shallowRenderer.getRenderOutput().props.children[0];
       title.props.children.should.equal('Just a title');
       title.props.className.should.equal('admin-bar__title');
