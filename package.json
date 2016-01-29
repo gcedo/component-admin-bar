@@ -138,8 +138,7 @@
   "dependencies": {
     "@economist/component-bar-wrapper": "^1.2.0",
     "@economist/component-link-button": "^1.4.1",
-    "@economist/component-palette": "^1.4.4",
-    "@economist/component-typography": "^2.0.0"
+    "@economist/component-palette": "^1.4.4"
   },
   "devDependencies": {
     "@economist/component-devpack": "^3.4.3",
