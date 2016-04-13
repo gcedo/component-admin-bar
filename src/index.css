@@ -1,0 +1,25 @@
+@import '@economist/component-link-button/index.css';
+@import '@economist/component-bar-wrapper/index.css';
+@import '@economist/component-palette/index.css';
+
+.admin-bar .bar-wrapper--container {
+  display: flex;
+  padding: 0;
+}
+
+.admin-bar {
+  padding-top: var(--admin-bar-vertical-padding, 0.5em);
+  padding-bottom: var(--admin-bar-vertical-padding, 0.5em);
+  background-color: var(--admin-bar-background, var(--color-honolulu));
+}
+
+.admin-bar .link-button {
+  background-color: var(--admin-bar__button-background, var(--color-chicago));
+}
+
+.admin-bar__title {
+  align-self: center;
+  flex: 1 1 auto;
+  color: var(--admin-bar__title-color, var(--color-thimphu));
+  font-weight: bold;
+}
