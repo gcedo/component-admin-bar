@@ -1,6 +1,6 @@
-@import '@economist/component-link-button/index.css';
+@import '@economist/component-link-button';
 @import '@economist/component-bar-wrapper/index.css';
-@import '@economist/component-palette/index.css';
+@import '@economist/component-palette';
 
 .admin-bar .bar-wrapper--container {
   display: flex;
@@ -13,7 +13,9 @@
   background-color: var(--admin-bar-background, var(--color-honolulu));
 }
 
-.admin-bar .link-button {
+.admin-bar__edit-link {
+  padding: var(--admin-bar__edit-link-vertical-padding, 0.71rem) var(--admin-bar__edit-link-vertical-padding, 2rem);
+  color: var(--admin-bar__edit-link-color, #fff);
   background-color: var(--admin-bar__button-background, var(--color-chicago));
 }
 

@@ -6,7 +6,7 @@ export default function AdminBar({ className, title, editLinkHref, renderEditLin
   const classNamesList = [ 'admin-bar' ];
   const children = [];
   if (className) {
-    classNamesList.push(this.props.className);
+    classNamesList.push(className);
   }
 
   const barWrapperClassName = classNamesList.join(' ');
